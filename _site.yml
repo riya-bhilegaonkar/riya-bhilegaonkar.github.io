@@ -3,8 +3,10 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "Academic and Professional Experience"
+    - text: "Education and Experience"
       href: about.html
+    - text: "Projects and Involvement"
+      href: extra_page.html
     - icon: fa-envelope fa-lg
       href: mailto:<rsb2204@cumc.columbia.edu>
     - icon: fa-github fa-lg

@@ -1,18 +1,20 @@
 ---
-title: "My website"
+title: "Riya Bhilegaonkar"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Riya's website
+<br><img src="images/riya.jpg" alt="riya" style="width:65%; border:10px solid"><br>
 
-Here is my [linkedin](https://www.linkedin.com/in/riya-bhilegaonkar/)
+## About
+I am current first year MS in Biostatistics Student at Columbia University Mailman School of Public Health.
 
-Here is a link to the about page:
-[about](about.html)
 
-Here is a link to the extra page:
-[extra page](extra_page.html)
+
+## Contact Information
+
+
+Email: rsb2204@cumc.columbia.edu
 

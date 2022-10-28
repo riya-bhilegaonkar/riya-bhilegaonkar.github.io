@@ -6,9 +6,11 @@ navbar:
     - text: "About"
       href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<rsb2204@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/riya-bhilegaonkar/
+    - icon: fa-brands fa-linkedin
+      href: https://www.linkedin.com/in/riya-bhilegaonkar/
 output:
   html_document:
     theme: journal

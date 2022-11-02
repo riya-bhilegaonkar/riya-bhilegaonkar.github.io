@@ -1,0 +1,67 @@
+---
+title: " Instacart Dashboard"
+author: "Riya Bhilegaonkar"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+runtime: shiny
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(leaflet)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r}
+data("instacart")
+instacart = instacart %>% 
+  as_tibble(instacart)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Number of items ordered in each department
+```{r}
+  instacart %>% 
+  count(department) %>% 
+   mutate(department = fct_reorder(department, n)) %>% 
+ plot_ly(
+   x=~department, y = ~n, type = "scatter", mode = "markers", alpha = 0.5)%>% 
+  layout(yaxis = list(title = 'number of items'))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Number of items ordered in each aisle of the pantry department
+
+```{r}
+  instacart %>% 
+  filter(department=="pantry")%>%
+  count(aisle)%>% 
+plot_ly(
+  x = ~aisle, y = ~n, color= ~aisle,
+  type = "bar", colors = "viridis")%>%  
+  layout(yaxis = list(title = 'number of items'))
+
+```
+
+
+### Number of times different products are ordered per aisle for the produce department 
+```{r}
+  instacart %>% 
+  filter(department=="produce") %>%
+  group_by(aisle) %>% 
+  count(product_name, aisle) %>% 
+   mutate(aisle = fct_reorder(aisle, n)) %>% 
+  plot_ly(y = ~n, color = ~aisle, type = "box", colors = "viridis")%>%
+  layout(yaxis = list(title = 'number of items'))
+
+```

@@ -7,6 +7,8 @@ navbar:
       href: about.html
     - text: "Projects and Involvement"
       href: extra_page.html
+    - text: Dashboard
+      href: p8105_hw4_rsb2204.html
     - icon: fa-envelope fa-lg
       href: mailto:<rsb2204@cumc.columbia.edu>
     - icon: fa-github fa-lg

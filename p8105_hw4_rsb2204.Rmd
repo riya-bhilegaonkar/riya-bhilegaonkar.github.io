@@ -1,6 +1,5 @@
 ---
 title: " Instacart Dashboard"
-author: "Riya Bhilegaonkar"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns

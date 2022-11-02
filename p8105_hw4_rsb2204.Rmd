@@ -36,7 +36,7 @@ Column {data-width=650}
   layout(yaxis = list(title = 'number of items'))
 ```
 
-Column {data-width=350}
+Column {data-width=650}
 -----------------------------------------------------------------------
 
 ### Number of items ordered in each aisle of the pantry department

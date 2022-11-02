@@ -20,10 +20,11 @@ library(flexdashboard)
 data("instacart")
 instacart = instacart %>% 
   as_tibble(instacart)
+View(instacart)
 ```
 
 
-Column {data-width=650}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Number of items ordered in each department
@@ -35,9 +36,6 @@ Column {data-width=650}
    x=~department, y = ~n, type = "scatter", mode = "markers", alpha = 0.5)%>% 
   layout(yaxis = list(title = 'number of items'))
 ```
-
-Column {data-width=650}
------------------------------------------------------------------------
 
 ### Number of items ordered in each aisle of the pantry department
 
@@ -52,11 +50,14 @@ plot_ly(
 
 ```
 
+Column {data-width=550}
+-----------------------------------------------------------------------
 
-### Number of times different products are ordered per aisle for the produce department 
+
+### Number of times different products are ordered per aisle for the international department 
 ```{r}
   instacart %>% 
-  filter(department=="produce") %>%
+  filter(department=="international") %>%
   group_by(aisle) %>% 
   count(product_name, aisle) %>% 
    mutate(aisle = fct_reorder(aisle, n)) %>% 

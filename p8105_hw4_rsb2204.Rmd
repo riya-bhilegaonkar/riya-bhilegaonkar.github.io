@@ -20,7 +20,6 @@ library(flexdashboard)
 data("instacart")
 instacart = instacart %>% 
   as_tibble(instacart)
-View(instacart)
 ```
 
 
